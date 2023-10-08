@@ -1,38 +1,71 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.App > p:nth-child(1) {
+  color: red;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: .6rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.App > p:nth-child(2) {
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-left: 5.5rem;
+  margin-bottom: 3rem;
+}
+
+form {
+  position: relative;
+}
+
+form input {
+  width: 500px;
+  padding: .5rem 2rem;
+  /* border-radius: 50px; */
+  border: none;
+  margin-right: 1rem;
+  margin-top: 1rem;
+  border-bottom: 1px solid black;
+  outline: none;
+  font-size: 1.6rem;
+}
+
+form button {
+  padding: .5rem 1rem;
+  border-radius: 50px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: lime;
+  transition: all .3s;
+  cursor: pointer;
+}
+
+form button:hover {
+  font-weight: 500;
+  scale: 1.1;
+}
+
+form label {
+  position: absolute;
+  top: 22px;
+  left: 32.5px;
+  font-size: 1.6rem;
+  opacity: .6;
+  transition: all .4s ease-in-out;
+}
+
+input:focus + label {
+    translate: 0 -30px
   }
-  to {
-    transform: rotate(360deg);
-  }
+  
+  input:valid + label {
+  translate: 0 -30px
+
 }
